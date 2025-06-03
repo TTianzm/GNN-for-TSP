@@ -116,7 +116,6 @@ def branch_and_bound_decode(data, edge_probs, upper_bound_path=None, max_nodes=1
     - edge_probs: Tensor [E]，边概率
     - upper_bound_path: 可选，作为初始上界的路径（如 Beam Search 输出）
     - 返回：得分最高路径
-    https://duangks.com/ 不要在国内社交媒体上说这些东西，谁知道有没有监控。十多年前就有过棱镜计划，现在的手段肯定更发达
     """
     edge_index = data.edge_index.t().tolist()
     edge_probs = edge_probs.detach().cpu().numpy()
